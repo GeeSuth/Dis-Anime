@@ -28,17 +28,26 @@ async function DrawCard(data) {
 
     divCard = document.getElementById("anime-cards");
 
+    // Check if request got error 
+    if (data["error"] == true) {
+        console.log("Oh! " + data["data"]);
+        return;
+    }
     data = data["data"];
 
     if (data != null) {
         data.forEach(row => {
-            /* '<p>' + row["filename"] + '</p>'; */
-            card = (`<div class="card anime-card" style="width: 18rem;">
-            <img src="${row["img"]}" class="card-img-top" alt="...">
+            card = document.createElement("div");
+            //< class="card anime-card" style="width: 18rem;">
+            card.classList.add("card");
+            card.classList.add("anime-card");
+            card.style.width = '18rem';
+
+            card.innerHTML = (`
+            <img src="${row["img"]}" class="card-img-top image-anime" alt="...">
             <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>`);
+            </div>`);
             console.log(card);
             divCard.append(card);
         });

@@ -44,4 +44,7 @@ body {
 
 .anime-card {
     margin: 10px;
+    padding: inherit;
 }
+
+.image-anime {}
