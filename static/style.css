@@ -1,0 +1,47 @@
+body {
+    background-color: #181818;
+    color: white;
+    /*background-color: white;*/
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: white;
+    font-weight: 900;
+}
+
+.input-text {
+    background-color: #333333;
+    color: white;
+}
+
+.center {
+    margin-left: 40%;
+}
+
+.displayflex {
+    display: flex;
+    align-items: baseline;
+}
+
+.btn-search {
+    margin-right: 10px;
+    width: auto;
+}
+
+.input-upload {
+    width: auto;
+}
+
+.divider {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    height: 1px;
+}
+
+.anime-card {
+    margin: 10px;
+}
