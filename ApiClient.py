@@ -23,7 +23,10 @@ def SearchingByUrl(url):
     data = []
     #print(result["result"])
     for row in result["result"]:
-        #print(row['anilist']["title"]["english"])
+        # We Don't need to get Adult content whatever 
+        if row['anilist']['isAdult'] == True:
+           continue
+
         datarow = {
             "filename" :row["filename"],
             "video" :row["video"],

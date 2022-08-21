@@ -1,97 +1,64 @@
 {% extends "layout.html" %} {% block title %} Index Page {% endblock %} {% block main %}
 
-<div class="col-md-12">
-    <div class="row">
-        <div class="mb-4" style="display: flex;">
-            <input class="form-control me-2 input-text" value="https://i.ytimg.com/vi/dWnhkEFRzFQ/maxresdefault.jpg" style="width: 70%;" type="text" name="url" autocomplete="false" placeholder="URL for Image" focus>
-            <input type="button" onclick="searchUrl()" name="search" value="Search" class="btn btn-primary btn-search">
-        </div>
-        <div class="row">
-            <div class="mb-4 displayflex">
-                <input class="form-control input-upload" type="file" name="Upload Image" placeholder="Upload Image">
-                <input type="button" style="margin-left: 10px;" name="search" value="Searching using Image" class="btn btn-primary btn-search">
+<div class="div-search">
+    <div style="display: flex;margin-left: 10%;margin-right: 10%; padding-top: 50px;align-items: center;">
+        <div style="    width: auto;
+        max-width: 70%;
+        min-width: 70%;
+        padding-right: 20px;">
+
+            <div class="relative">
+                <input type="search" value="https://i.ytimg.com/vi/dWnhkEFRzFQ/maxresdefault.jpg" id="urlImg" class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Image Url">
+                <button type="submit" onclick="searchUrl()" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
             </div>
+
         </div>
 
-        <div class="divider"></div>
-
-        <div class="cards">
-            <div class="col-md-12">
-                <div class="row" id="anime-cards">
-                    <!-- Temp Html Code -->
-
-                    <div class="card anime-card" style="width: 18rem;">
-                        <img src="https://media.trace.moe/image/21632/%5B%E6%A1%9C%E9%83%BD%E5%AD%97%E5%B9%95%E7%BB%84%5D%5B720P%5D%5BCollaboration%20Works%5D%E3%83%90%E3%82%AB%E3%81%AA%E5%A6%B9%E3%82%92%E5%88%A9%E5%8F%A3%E3%81%AB%E3%81%99%E3%82%8B%E3%81%AE%E3%81%AF%E4%BF%BA%E3%81%AE%C3%97%C3%97%E3%81%A0%E3%81%91%E3%81%AA%E4%BB%B6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E3%82%B3%E3%82%B9%E3%83%97%E3%83%AC%E7%88%9B%E6%BC%AB%EF%BC%81%EF%BC%81%20%E5%BE%A1%E6%B4%A5%E4%BA%95%20%E8%8A%AD%E8%8F%AF%E4%B8%80%E7%95%AA%E5%A5%BD%E3%81%8D%E3%81%AA%E3%81%AE%E3%81%AF%E3%80%81%E3%81%8A%E5%85%84%E3%81%A1%E3%82%83%E3%82%93%E7%B7%A8(waifu2x).mp4.jpg?t=892.17&amp;now=1661079600&amp;token=YnE8XMJa9xwRXbVaDH4TGbYAg"
-                            class="card-img-top image-anime" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card anime-card" style="width: 18rem;">
-                        <img src="https://media.trace.moe/image/15109/Cuticle%20Tantei%20Inaba%20-%2006%20(BD%201280x720%20x264%20AAC).mp4.jpg?t=685.665&amp;now=1661079600&amp;token=C1zbuzrahlXabcQqakaD091wsf4" class="card-img-top image-anime" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card anime-card" style="width: 18rem;">
-                        <img src="https://media.trace.moe/image/12995/Dark%20Blue%20Vol.1%20%EF%BD%9E%E3%83%9F%E3%81%A4%E3%82%81%E3%82%8B%E6%81%A5%E3%81%A2%E3%82%89%E3%81%84%EF%BD%9E%20(DVD%201280x720%20x264%20AAC).mp4.jpg?t=1461.58&amp;now=1661079600&amp;token=wlpYiq7I0aEfZuxUNQ89w725yyc"
-                            class="card-img-top image-anime" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card anime-card" style="width: 18rem;">
-                        <img src="https://media.trace.moe/image/407/%5BTantei%20Gakuen%20Q%5D%5B13%5D.mp4.jpg?t=859.165&amp;now=1661079600&amp;token=SFQ0hRCOMvZ5KlbYzGgpSlDzt30" class="card-img-top image-anime" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card anime-card" style="width: 18rem;">
-                        <img src="https://media.trace.moe/image/18691/%5B140704%5D%5B%E3%83%A1%E3%83%AA%E3%83%BC%20%E3%82%B8%E3%82%A7%E3%83%BC%E3%83%B3%5D%E5%A5%B3%E5%AD%90%E9%AB%98%E7%94%9F%E3%81%AE%E8%85%B0%E3%81%A4%E3%81%8D%20%E5%86%99%E7%9C%9F%E9%83%A8%E7%B7%A8%20%5B1280x720%20x264%20Hi10P%20AAC%5D.mp4.jpg?t=855.33&amp;now=1661079600&amp;token=HQlKqaYbrsI8Ny9g5W94GZNVICg"
-                            class="card-img-top image-anime" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card anime-card" style="width: 18rem;">
-                        <img src="https://media.trace.moe/image/21018/Denpa%20Kyoushi%20-%2009%20(BD%201280x720%20x264%20AAC).mp4.jpg?t=356.125&amp;now=1661079600&amp;token=BJbE7VMu3eNB5MQUMCbXYF2aIcM" class="card-img-top image-anime" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card anime-card" style="width: 18rem;">
-                        <img src="https://media.trace.moe/image/6702/%5BReinForce%5D%20Fairy%20Tail%20-%20021%20(BDRip%201280x720%20x264%20FLAC).mp4.jpg?t=553.335&amp;now=1661079600&amp;token=dDzdkTSK2KyHlD9qEvnd7QpiE" class="card-img-top image-anime" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card anime-card" style="width: 18rem;">
-                        <img src="https://media.trace.moe/image/18695/(18%E7%A6%81%E3%82%A2%E3%83%8B%E3%83%A1)%5B%E3%83%A1%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%B8%E3%82%A7%E3%83%BC%E3%83%B3%5D%E8%99%9C%E3%83%8E%E5%A5%91%20%EF%BD%9E%E5%AE%B6%E6%97%8F%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB%E8%BA%AB%E4%BD%93%E3%82%92%E5%B7%AE%E3%81%97%E5%87%BA%E3%81%99%E5%A7%89%E3%81%A8%E5%A6%B9%EF%BD%9E%20%E4%B8%8B%E5%B7%BB%5B720P%5D.mp4.jpg?t=184.795&amp;now=1661079600&amp;token=CFWV1yoSkFHmHtN6GvlRRzhvoc4"
-                            class="card-img-top image-anime" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card anime-card" style="width: 18rem;">
-                        <img src="https://media.trace.moe/image/61/%5BPOPGO_FREEWIND%26KTXP%5D%5BD.N.ANGEL%5D%5B14%5D%5BDVDRIP%5D.mp4.jpg?t=855.25&amp;now=1661079600&amp;token=c6JE1kpOcPhkmF6JngHx4iRIKNI" class="card-img-top image-anime" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card anime-card" style="width: 18rem;">
-                        <img src="https://media.trace.moe/image/101043/%5BLeopard-Raws%5D%20Aikatsu%20Friends!%20-%2005%20RAW%20(TX%201280x720%20x264%20AAC).mp4.jpg?t=1153&amp;now=1661079600&amp;token=GcxWXv0aR7jId7ZVTRxlHLA9LI" class="card-img-top image-anime" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <!-- End Temp Html Code -->
-                    <!-- Card Anmie Be here!! -->
+        <div style="width: 100%;">
+            <form>
+                <div class="relative">
+                    <input type="file" id="search" class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search" required>
+                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                 </div>
-            </div>
+            </form>
         </div>
-
     </div>
 </div>
+
+
+
+
+<div class="divinder">
+    <div class="inline-flex justify-center items-center w-full">
+        <hr class="my-8 w-64 h-1 bg-gray-200 rounded border-0 dark:bg-gray-700">
+        <div class="absolute left-1/2 px-4 bg-white -translate-x-1/2 dark:bg-gray-900">
+            <svg aria-hidden="true" class="w-5 h-5 text-gray-700 dark:text-gray-300" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path></svg>
+        </div>
+    </div>
+</div>
+
+
+
+<div style="margin-left: 10%;margin-right: 10%;" class="flex p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
+    <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <span class="sr-only">Info</span>
+    <div>
+        <span class="font-medium">Info alert!</span> We like to let you know
+        <span class="font-medium">NSFW</span> Result will Not Shown and remove from result onready!
+    </div>
+</div>
+
+<div class="anime-cards" id="anime-cards">
+
+
+
+
+
+</div>
+
+
+
 
 {% endblock %}
