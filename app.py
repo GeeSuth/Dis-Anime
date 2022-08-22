@@ -1,5 +1,5 @@
 from email.mime import image
-from flask import Flask, request
+from flask import Flask, render_template, request
 from index import Index
 from helper import ReturnData,MsgError
 from ApiClient import SearchingByUrl,SearchingByImage
@@ -47,3 +47,15 @@ def searchUpladImage():
         
       except Exception as e:
         return ReturnData(f"Can't Handle this image , {str(e)}", True)
+
+
+
+
+@app.route("/how")
+def HowItWork():
+    return render_template("/pages/how.html")
+
+
+@app.route("/about")
+def About():
+    return render_template("/pages/about.html")
