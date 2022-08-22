@@ -20,9 +20,38 @@ def SearchingByUrl(url):
         return MsgError(f"Sorry! there a error, {result['error']}")
     
 
+    
+    
+
+    return ReturnData(InitData(result))
+
+
+def SearchingByImage(image):
+    result =  []
+    try:
+        result = requests.post("https://api.trace.moe/search?anilistInfo",
+            data= image.stream.read(),
+            headers={"Content-Type": "image/jpeg"}
+    ).json()
+    except (KeyError, TypeError, ValueError):
+        return MsgError(f"API disconnected!")
+    
+
+    # API return error
+    if result["error"] != "":
+        return MsgError(f"Sorry! there a error, {result['error']}")
+    
+
+    return ReturnData(InitData(result))
+
+
+    
+
+
+
+def InitData(ApiResponse):
     data = []
-    #print(result["result"])
-    for row in result["result"]:
+    for row in ApiResponse["result"]:
         # We Don't need to get Adult content whatever 
         if row['anilist']['isAdult'] == True:
            continue
@@ -35,6 +64,4 @@ def SearchingByUrl(url):
         } 
         data.append(datarow)
     
-
-    return ReturnData(data)
-
+    return data

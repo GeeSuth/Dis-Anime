@@ -109,3 +109,29 @@ async function DrawCard(data) {
         });
     }
 }
+
+
+
+/* Upload Images to server  */
+async function searchImage() {
+    removeOldCards();
+    AddSkeletonLoading();
+    result = await uploadImage();
+    removeOldCards();
+    await DrawCard(result);
+
+}
+
+async function uploadImage() {
+    let photo = document.getElementById("searchImage").files[0];
+    let formData = new FormData();
+
+    formData.append("photo", photo);
+    let response = await fetch('/searchImage', {
+        method: "POST",
+        body: formData
+    })
+
+
+    return await response.json();
+}

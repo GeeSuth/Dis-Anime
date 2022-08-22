@@ -8,9 +8,9 @@ body {
 .anime-cards {
     margin: 30px;
     display: flex;
-    position: fixed;
+    position: absolute;
     overflow: auto;
-    width: 100%;
+    width: 95%;
 }
 
 .anime-card {
