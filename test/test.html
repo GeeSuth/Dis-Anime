@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Anime Discover : Index Page </title>
+    <title> Dis-Anime </title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">-->
-    <link href="../static/style.css" rel="stylesheet" />
+    <link href="../static/style.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style></style>
     <script>
         tailwind.config = {
+            darkMode: 'media',
             theme: {
                 extend: {
                     colors: {
@@ -19,101 +20,1200 @@
             }
         }
     </script>
+    <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css">
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+    <style>
+        /* ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com */
+        
+        *,
+         ::after,
+         ::before {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e5e7eb
+        }
+        
+         ::after,
+         ::before {
+            --tw-content: ''
+        }
+        
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            -moz-tab-size: 4;
+            tab-size: 4;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+        }
+        
+        body {
+            margin: 0;
+            line-height: inherit
+        }
+        
+        hr {
+            height: 0;
+            color: inherit;
+            border-top-width: 1px
+        }
+        
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: inherit
+        }
+        
+        b,
+        strong {
+            font-weight: bolder
+        }
+        
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 1em
+        }
+        
+        small {
+            font-size: 80%
+        }
+        
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+        
+        sub {
+            bottom: -.25em
+        }
+        
+        sup {
+            top: -.5em
+        }
+        
+        table {
+            text-indent: 0;
+            border-color: inherit;
+            border-collapse: collapse
+        }
+        
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            font-weight: inherit;
+            line-height: inherit;
+            color: inherit;
+            margin: 0;
+            padding: 0
+        }
+        
+        button,
+        select {
+            text-transform: none
+        }
+        
+        [type=button],
+        [type=reset],
+        [type=submit],
+        button {
+            -webkit-appearance: button;
+            background-color: transparent;
+            background-image: none
+        }
+        
+         :-moz-focusring {
+            outline: auto
+        }
+        
+         :-moz-ui-invalid {
+            box-shadow: none
+        }
+        
+        progress {
+            vertical-align: baseline
+        }
+        
+         ::-webkit-inner-spin-button,
+         ::-webkit-outer-spin-button {
+            height: auto
+        }
+        
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+        
+         ::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+        
+         ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+        
+        summary {
+            display: list-item
+        }
+        
+        blockquote,
+        dd,
+        dl,
+        figure,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        p,
+        pre {
+            margin: 0
+        }
+        
+        fieldset {
+            margin: 0;
+            padding: 0
+        }
+        
+        legend {
+            padding: 0
+        }
+        
+        menu,
+        ol,
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+        
+        textarea {
+            resize: vertical
+        }
+        
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            color: #9ca3af
+        }
+        
+        [role=button],
+        button {
+            cursor: pointer
+        }
+        
+         :disabled {
+            cursor: default
+        }
+        
+        audio,
+        canvas,
+        embed,
+        iframe,
+        img,
+        object,
+        svg,
+        video {
+            display: block;
+            vertical-align: middle
+        }
+        
+        img,
+        video {
+            max-width: 100%;
+            height: auto
+        }
+        
+        *,
+         ::before,
+         ::after {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia:
+        }
+        
+         ::-webkit-backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia:
+        }
+        
+         ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia:
+        }
+        
+        .container {
+            width: 100%
+        }
+        
+        @media (min-width: 640px) {
+            .container {
+                max-width: 640px
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1024px
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .container {
+                max-width: 1280px
+            }
+        }
+        
+        @media (min-width: 1536px) {
+            .container {
+                max-width: 1536px
+            }
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0
+        }
+        
+        .absolute {
+            position: absolute
+        }
+        
+        .relative {
+            position: relative
+        }
+        
+        .right-2\.5 {
+            right: 0.625rem
+        }
+        
+        .bottom-2\.5 {
+            bottom: 0.625rem
+        }
+        
+        .left-1\/2 {
+            left: 50%
+        }
+        
+        .right-2 {
+            right: 0.5rem
+        }
+        
+        .bottom-2 {
+            bottom: 0.5rem
+        }
+        
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto
+        }
+        
+        .my-8 {
+            margin-top: 2rem;
+            margin-bottom: 2rem
+        }
+        
+        .mr-3 {
+            margin-right: 0.75rem
+        }
+        
+        .mt-4 {
+            margin-top: 1rem
+        }
+        
+        .mb-4 {
+            margin-bottom: 1rem
+        }
+        
+        .mb-2\.5 {
+            margin-bottom: 0.625rem
+        }
+        
+        .mb-2 {
+            margin-bottom: 0.5rem
+        }
+        
+        .mb-3 {
+            margin-bottom: 0.75rem
+        }
+        
+        .ml-2 {
+            margin-left: 0.5rem
+        }
+        
+        .-mr-1 {
+            margin-right: -0.25rem
+        }
+        
+        .block {
+            display: block
+        }
+        
+        .inline {
+            display: inline
+        }
+        
+        .flex {
+            display: flex
+        }
+        
+        .inline-flex {
+            display: inline-flex
+        }
+        
+        .hidden {
+            display: none
+        }
+        
+        .h-6 {
+            height: 1.5rem
+        }
+        
+        .h-5 {
+            height: 1.25rem
+        }
+        
+        .h-1 {
+            height: 0.25rem
+        }
+        
+        .h-48 {
+            height: 12rem
+        }
+        
+        .h-12 {
+            height: 3rem
+        }
+        
+        .h-2\.5 {
+            height: 0.625rem
+        }
+        
+        .h-2 {
+            height: 0.5rem
+        }
+        
+        .h-4 {
+            height: 1rem
+        }
+        
+        .w-full {
+            width: 100%
+        }
+        
+        .w-5 {
+            width: 1.25rem
+        }
+        
+        .w-64 {
+            width: 16rem
+        }
+        
+        .w-12 {
+            width: 3rem
+        }
+        
+        .w-48 {
+            width: 12rem
+        }
+        
+        .w-96 {
+            width: 24rem
+        }
+        
+        .w-4 {
+            width: 1rem
+        }
+        
+        .max-w-sm {
+            max-width: 24rem
+        }
+        
+        .flex-shrink-0 {
+            flex-shrink: 0
+        }
+        
+        .-translate-x-1\/2 {
+            --tw-translate-x: -50%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+        }
+        
+        @keyframes pulse {
+            50% {
+                opacity: .5
+            }
+        }
+        
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite
+        }
+        
+        .flex-col {
+            flex-direction: column
+        }
+        
+        .flex-wrap {
+            flex-wrap: wrap
+        }
+        
+        .items-center {
+            align-items: center
+        }
+        
+        .justify-center {
+            justify-content: center
+        }
+        
+        .justify-between {
+            justify-content: space-between
+        }
+        
+        .self-center {
+            align-self: center
+        }
+        
+        .whitespace-nowrap {
+            white-space: nowrap
+        }
+        
+        .rounded {
+            border-radius: 0.25rem
+        }
+        
+        .rounded-lg {
+            border-radius: 0.5rem
+        }
+        
+        .rounded-full {
+            border-radius: 9999px
+        }
+        
+        .border {
+            border-width: 1px
+        }
+        
+        .border-0 {
+            border-width: 0px
+        }
+        
+        .border-gray-200 {
+            --tw-border-opacity: 1;
+            border-color: rgb(229 231 235 / var(--tw-border-opacity))
+        }
+        
+        .border-gray-100 {
+            --tw-border-opacity: 1;
+            border-color: rgb(243 244 246 / var(--tw-border-opacity))
+        }
+        
+        .border-gray-300 {
+            --tw-border-opacity: 1;
+            border-color: rgb(209 213 219 / var(--tw-border-opacity))
+        }
+        
+        .bg-white {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+        }
+        
+        .bg-gray-50 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(249 250 251 / var(--tw-bg-opacity))
+        }
+        
+        .bg-blue-700 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(29 78 216 / var(--tw-bg-opacity))
+        }
+        
+        .bg-gray-700 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(55 65 81 / var(--tw-bg-opacity))
+        }
+        
+        .bg-gray-200 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(229 231 235 / var(--tw-bg-opacity))
+        }
+        
+        .bg-blue-100 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(219 234 254 / var(--tw-bg-opacity))
+        }
+        
+        .bg-gray-300 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(209 213 219 / var(--tw-bg-opacity))
+        }
+        
+        .p-4 {
+            padding: 1rem
+        }
+        
+        .p-2\.5 {
+            padding: 0.625rem
+        }
+        
+        .p-2 {
+            padding: 0.5rem
+        }
+        
+        .p-5 {
+            padding: 1.25rem
+        }
+        
+        .px-2 {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem
+        }
+        
+        .py-2\.5 {
+            padding-top: 0.625rem;
+            padding-bottom: 0.625rem
+        }
+        
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem
+        }
+        
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem
+        }
+        
+        .px-3 {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem
+        }
+        
+        .pr-4 {
+            padding-right: 1rem
+        }
+        
+        .pl-3 {
+            padding-left: 0.75rem
+        }
+        
+        .pl-10 {
+            padding-left: 2.5rem
+        }
+        
+        .text-center {
+            text-align: center
+        }
+        
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.75rem
+        }
+        
+        .text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem
+        }
+        
+        .text-2xl {
+            font-size: 1.5rem;
+            line-height: 2rem
+        }
+        
+        .font-semibold {
+            font-weight: 600
+        }
+        
+        .font-medium {
+            font-weight: 500
+        }
+        
+        .font-bold {
+            font-weight: 700
+        }
+        
+        .font-normal {
+            font-weight: 400
+        }
+        
+        .tracking-tight {
+            letter-spacing: -0.025em
+        }
+        
+        .text-white {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity))
+        }
+        
+        .text-gray-500 {
+            --tw-text-opacity: 1;
+            color: rgb(107 114 128 / var(--tw-text-opacity))
+        }
+        
+        .text-gray-900 {
+            --tw-text-opacity: 1;
+            color: rgb(17 24 39 / var(--tw-text-opacity))
+        }
+        
+        .text-gray-700 {
+            --tw-text-opacity: 1;
+            color: rgb(55 65 81 / var(--tw-text-opacity))
+        }
+        
+        .text-blue-700 {
+            --tw-text-opacity: 1;
+            color: rgb(29 78 216 / var(--tw-text-opacity))
+        }
+        
+        .text-gray-200 {
+            --tw-text-opacity: 1;
+            color: rgb(229 231 235 / var(--tw-text-opacity))
+        }
+        
+        .shadow {
+            --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+        }
+        
+        .shadow-md {
+            --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+        }
+        
+        .hover\:bg-gray-100:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgb(243 244 246 / var(--tw-bg-opacity))
+        }
+        
+        .hover\:bg-blue-800:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgb(30 64 175 / var(--tw-bg-opacity))
+        }
+        
+        .focus\:border-blue-500:focus {
+            --tw-border-opacity: 1;
+            border-color: rgb(59 130 246 / var(--tw-border-opacity))
+        }
+        
+        .focus\:outline-none:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px
+        }
+        
+        .focus\:ring-4:focus {
+            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+            box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+        }
+        
+        .focus\:ring-gray-200:focus {
+            --tw-ring-opacity: 1;
+            --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity))
+        }
+        
+        .focus\:ring-blue-500:focus {
+            --tw-ring-opacity: 1;
+            --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity))
+        }
+        
+        .focus\:ring-blue-300:focus {
+            --tw-ring-opacity: 1;
+            --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity))
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .dark\:border-gray-700 {
+                --tw-border-opacity: 1;
+                border-color: rgb(55 65 81 / var(--tw-border-opacity))
+            }
+            .dark\:border-gray-600 {
+                --tw-border-opacity: 1;
+                border-color: rgb(75 85 99 / var(--tw-border-opacity))
+            }
+            .dark\:bg-gray-900 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(17 24 39 / var(--tw-bg-opacity))
+            }
+            .dark\:bg-gray-800 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(31 41 55 / var(--tw-bg-opacity))
+            }
+            .dark\:bg-gray-700 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(55 65 81 / var(--tw-bg-opacity))
+            }
+            .dark\:bg-blue-600 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(37 99 235 / var(--tw-bg-opacity))
+            }
+            .dark\:bg-gray-600 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(75 85 99 / var(--tw-bg-opacity))
+            }
+            .dark\:bg-blue-200 {
+                --tw-bg-opacity: 1;
+                background-color: rgb(191 219 254 / var(--tw-bg-opacity))
+            }
+            .dark\:text-white {
+                --tw-text-opacity: 1;
+                color: rgb(255 255 255 / var(--tw-text-opacity))
+            }
+            .dark\:text-gray-400 {
+                --tw-text-opacity: 1;
+                color: rgb(156 163 175 / var(--tw-text-opacity))
+            }
+            .dark\:text-gray-300 {
+                --tw-text-opacity: 1;
+                color: rgb(209 213 219 / var(--tw-text-opacity))
+            }
+            .dark\:text-blue-800 {
+                --tw-text-opacity: 1;
+                color: rgb(30 64 175 / var(--tw-text-opacity))
+            }
+            .dark\:text-gray-600 {
+                --tw-text-opacity: 1;
+                color: rgb(75 85 99 / var(--tw-text-opacity))
+            }
+            .dark\:placeholder-gray-400::placeholder {
+                --tw-placeholder-opacity: 1;
+                color: rgb(156 163 175 / var(--tw-placeholder-opacity))
+            }
+            .dark\:hover\:bg-gray-700:hover {
+                --tw-bg-opacity: 1;
+                background-color: rgb(55 65 81 / var(--tw-bg-opacity))
+            }
+            .dark\:hover\:bg-blue-700:hover {
+                --tw-bg-opacity: 1;
+                background-color: rgb(29 78 216 / var(--tw-bg-opacity))
+            }
+            .dark\:focus\:border-blue-500:focus {
+                --tw-border-opacity: 1;
+                border-color: rgb(59 130 246 / var(--tw-border-opacity))
+            }
+            .dark\:focus\:ring-gray-700:focus {
+                --tw-ring-opacity: 1;
+                --tw-ring-color: rgb(55 65 81 / var(--tw-ring-opacity))
+            }
+            .dark\:focus\:ring-blue-500:focus {
+                --tw-ring-opacity: 1;
+                --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity))
+            }
+            .dark\:focus\:ring-blue-800:focus {
+                --tw-ring-opacity: 1;
+                --tw-ring-color: rgb(30 64 175 / var(--tw-ring-opacity))
+            }
+        }
+        
+        @media (min-width: 640px) {
+            .sm\:h-9 {
+                height: 2.25rem
+            }
+            .sm\:px-4 {
+                padding-left: 1rem;
+                padding-right: 1rem
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .md\:mt-0 {
+                margin-top: 0px
+            }
+            .md\:block {
+                display: block
+            }
+            .md\:w-auto {
+                width: auto
+            }
+            .md\:flex-row {
+                flex-direction: row
+            }
+            .md\:space-x-8> :not([hidden])~ :not([hidden]) {
+                --tw-space-x-reverse: 0;
+                margin-right: calc(2rem * var(--tw-space-x-reverse));
+                margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)))
+            }
+            .md\:border-0 {
+                border-width: 0px
+            }
+            .md\:bg-white {
+                --tw-bg-opacity: 1;
+                background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+            }
+            .md\:bg-transparent {
+                background-color: transparent
+            }
+            .md\:p-0 {
+                padding: 0px
+            }
+            .md\:p-6 {
+                padding: 1.5rem
+            }
+            .md\:text-sm {
+                font-size: 0.875rem;
+                line-height: 1.25rem
+            }
+            .md\:font-medium {
+                font-weight: 500
+            }
+            .md\:text-blue-700 {
+                --tw-text-opacity: 1;
+                color: rgb(29 78 216 / var(--tw-text-opacity))
+            }
+            @media (prefers-color-scheme: dark) {
+                .md\:dark\:bg-gray-900 {
+                    --tw-bg-opacity: 1;
+                    background-color: rgb(17 24 39 / var(--tw-bg-opacity))
+                }
+            }
+        }
+        
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 
-<body>
+<body class="dark:bg-gray-900" data-new-gr-c-s-check-loaded="14.1075.0" data-gr-ext-installed="">
 
 
 
 
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
-            <a href="https://flowbite.com/" class="flex items-center">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            <a href="/" class="flex items-center">
+                <img src="static/img/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Dis-Anime</span>
             </a>
-            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-      </button>
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
-                        <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                        <a href="/how" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">How it Work</a>
+                    </li>
+                    <li>
+                        <a href="/about" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">About</a>
+                    </li>
+                    <li>
+                        <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                            <svg id="theme-toggle-light-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
+
     </nav>
 
 
 
-    <div style="display: flex;margin-left: 10%;margin-right: 10%; padding-top: 50px;align-items: center;">
-        <div style="    width: auto;
+
+
+    <div class="div-search">
+        <div style="display: flex;margin-left: 10%;margin-right: 10%; padding-top: 50px;align-items: center;">
+            <div style="    width: auto;
         max-width: 70%;
         min-width: 70%;
         padding-right: 20px;">
-            <form>
+
                 <div class="relative">
-                    <input type="search" id="search" class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Image Url" required>
-                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                    <input type="search" value="" id="urlImg" class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Image Url">
+                    <button type="submit" onclick="searchUrl()" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                    <button type="submit" style="margin-right: 85px;" onclick="pasteUrl()" class="text-white absolute right-2.5 bottom-2.5 bg-gray-700 hover:bg-white-800 focus:ring-4 focus:outline-none focus:ring-white-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-600 dark:hover:bg-white-700 dark:focus:ring-white-800">Paste</button>
                 </div>
-            </form>
-        </div>
 
-        <div style="width: auto;">
-            <form>
+            </div>
+
+            <div style="width: 100%;">
+
                 <div class="relative">
-                    <input type="file" id="search" class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Search" required>
-                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                    <input type="file" id="searchImage" class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search" required="">
+                    <button type="submit" onclick="searchImage()" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                 </div>
-            </form>
-        </div>
-    </div>
 
-
-
-
-    <div class="inline-flex justify-center items-center w-full">
-        <hr class="my-8 w-64 h-1 bg-gray-200 rounded border-0 dark:bg-gray-700">
-        <div class="absolute left-1/2 px-4 bg-white -translate-x-1/2 dark:bg-gray-900">
-            <svg aria-hidden="true" class="w-5 h-5 text-gray-700 dark:text-gray-300" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path></svg>
-        </div>
-    </div>
-
-
-
-    <div class="anime-cards">
-
-
-        <div class="anime-card max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <video class="w-96" controls>
-                    <source src="https://flowbite.com/docs/videos/flowbite.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Read more
-                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
             </div>
         </div>
     </div>
+
+
+
+
+    <div class="divinder">
+        <div class="inline-flex justify-center items-center w-full">
+            <hr class="my-8 w-64 h-1 bg-gray-200 rounded border-0 dark:bg-gray-700">
+            <div class="absolute left-1/2 px-4 bg-white -translate-x-1/2 dark:bg-gray-900">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-700 dark:text-gray-300" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path></svg>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div style="margin-left: 10%;margin-right: 10%;" class="flex p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
+        <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+        <span class="sr-only">Info</span>
+        <div>
+            <span class="font-medium">Info alert!</span> We like to let you know
+            <span class="font-medium">NSFW</span> Result will Not Shown and remove from result onready!
+        </div>
+    </div>
+
+    <div class="anime-cards" id="anime-cards">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+
+
 
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="static/main.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+
+    <daily-companion-app></daily-companion-app>
 </body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 
 </html>

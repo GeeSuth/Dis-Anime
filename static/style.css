@@ -1,7 +1,8 @@
 body {
-    background-color: #181818;
-    color: white;
+    /*background-color: #181818;*/
+    /*color: white;*/
     /*background-color: white;*/
+    min-height: 1000px;
     height: 100%;
 }
 
