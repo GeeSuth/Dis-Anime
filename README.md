@@ -2,7 +2,7 @@
 
 ##### What is the `Dis-Anime`
 
-Discover Anime it's a web appilcation help anime fans to find anime name and details of anmie using image only! 
+Discover Anime it's a web Application help anime fans to find anime name and details of anime using photo only! 
 
 
 
