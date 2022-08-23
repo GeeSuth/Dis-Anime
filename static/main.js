@@ -84,15 +84,14 @@ async function DrawCard(data) {
             //< class="card anime-card" style="width: 18rem;">
             card.classList.add("card");
             card.classList.add("anime-card");
+            card.classList.add("swiper-slide");
             card.style.width = '18rem';
             //row["img"]
             card.innerHTML = (`<div style="max-height: 400px;height: 400px;min-height: 400px;" class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
                 <video class="w-96" controls>
                     <source src="${row["video"]}" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
-            </a>
             <div class="p-5">
                 <a href="#">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${row["title"]}</h5>
@@ -104,7 +103,7 @@ async function DrawCard(data) {
                 </a>
             </div>
         </div>`);
-            console.log(card);
+            //console.log(card);
             divCard.append(card);
         });
     }
