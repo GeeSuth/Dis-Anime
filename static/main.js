@@ -87,7 +87,7 @@ async function DrawCard(data) {
             card.classList.add("swiper-slide");
             card.style.width = '18rem';
             //row["img"]
-            card.innerHTML = (`<div style="max-height: 400px;height: 400px;min-height: 400px;" class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+            card.innerHTML = (`<div style="max-height: 400px;height: 400px;min-height: 400px;width:auto" class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                 <video class="w-96" controls>
                     <source src="${row["video"]}" type="video/mp4">
                     Your browser does not support the video tag.

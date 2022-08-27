@@ -18,7 +18,8 @@ body {
     /*margin: 10px;
     max-width: 300px;
     min-width: 300px;*/
-    width: auto;
+    width: auto !important;
+    max-width: 300px !important;
     border-radius: 10px;
 }
 
@@ -46,4 +47,19 @@ body {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+}
+
+.div-search {
+    /*display: flex;*/
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 50px;
+    align-items: center;
+}
+
+.option-search {
+    width: auto;
+    /*max-width: 70%;
+    min-width: 70%;*/
+    margin-top: 20px;
 }
