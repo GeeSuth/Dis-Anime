@@ -84,11 +84,14 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 5,
+            slidesPerView: 1,
             spaceBetween: 10,
-            slidesPerGroup: 5,
+            /*slidesPerGroup: 5,*/
+            longSwipes: true,
             loop: true,
             loopFillGroupWithBlank: false,
+            preloadImages: true,
+            slideToClickedSlide: true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
