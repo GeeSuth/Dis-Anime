@@ -4,6 +4,9 @@
 
 Discover Anime it's a web Application help anime fans to find anime name and details of anime using photo only! 
 
+#### ScreenShoot: 
+![image](https://user-images.githubusercontent.com/10328974/188497331-e05d13d1-eb8a-484d-b946-56bc5c4e2af2.png)
+
 
 
 
